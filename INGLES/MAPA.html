@@ -1,0 +1,1370 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rooms</title>
+<style id="applicationStylesheet" type="text/css">
+	* {
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+		border: none;
+	}
+	#MAPA {
+		position: absolute;
+		width: 1920px;
+		height: 1080px;
+		background-color: rgba(255,255,255,1);
+		overflow: hidden;
+		zoom: 79%;
+	}
+	#Back___ {
+		left: 145px;
+		top: 55px;
+		position: absolute;
+		overflow: visible;
+		width: 62px;
+		height: 27px;
+		cursor: pointer;
+		text-align: left;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: lighter;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#n___Rooms {
+		left: 202px;
+		top: 55px;
+		position: absolute;
+		overflow: visible;
+		width: 350px;
+		height: 27px;
+		text-align: left;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: lighter;
+		font-size: 20px;
+		color: rgba(112,112,112,1);
+	}
+	#Grupo_de_rolagem_2 {
+		mix-blend-mode: normal;
+		position: absolute;
+		width: 1178.5px;
+		height: 1145px;
+		left: 741.5px;
+		top: 310px;
+		overflow: hidden;
+	}
+	#Grupo_45 {
+		position: absolute;
+		width: 1178.5px;
+		height: 1144.637px;
+		left: 0px;
+		top: 0.363px;
+		overflow: visible;
+	}
+	#Retngulo_26 {
+		fill: rgba(255,255,255,1);
+	}
+	.Retngulo_26 {
+		position: absolute;
+		overflow: visible;
+		width: 1178.5px;
+		height: 1144.637px;
+		left: 0px;
+		top: 0px;
+	}
+	#Componente_16__3 {
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 73px;
+		top: 46px;
+		overflow: visible;
+	}
+	#Imagem_19 {
+		opacity: 0.998;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 70px;
+		top: 45px;
+		overflow: visible;
+	}
+	f.container1 {
+		position: relative;
+		width: 50%;
+	}
+
+	.overlay1 {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: white;
+	}
+
+	.container1:hover .overlay1 {
+		opacity: 70%;
+	}
+
+	.text1 {
+		color: black;
+		font-size: 12px;
+		line-height: 1.5;
+		position: absolute;
+		top: 8%;
+		left: 13%;
+		padding: 5%;
+		text-align: center;
+		font-family: Gotham;
+		font-weight: normal;
+	}
+	
+	#Grupo_43 {
+		opacity: 0;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Caminho_23 {
+		opacity: 0.901;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Caminho_23 {
+		overflow: visible;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Loftlibetta1__71_Via_Giulio_Ro {
+		left: 96px;
+		top: 130px;
+		position: absolute;
+		overflow: visible;
+		width: 301px;
+		height: 69px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#Componente_17__1 {
+		position: absolute;
+		width: 495px;
+		height: 328px;
+		left: 72px;
+		top: 405.279px;
+		overflow: visible;
+	}
+	#Imagem_27 {
+		position: absolute;
+		width: 494px;
+		height: 327px;
+		left: 0px;
+		top: 1px;
+		overflow: visible;
+	}
+	f.container3 {
+		position: relative;
+		width: 50%;
+	}
+
+	.overlay3 {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: white;
+	}
+
+	.container3:hover .overlay3 {
+		opacity: 70%;
+	}
+
+	.text3 {
+		color: black;
+		font-size: 12px;
+		line-height: 1.5;
+		position: absolute;
+		top: 25%;
+		left: 25%;
+		padding: 5%;
+		text-align: center;
+		font-family: Gotham;
+		font-weight: normal;
+	}
+	#Grupo_44 {
+		opacity: 0;
+		position: absolute;
+		width: 495px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_27 {
+		opacity: 0.72;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_27 {
+		position: absolute;
+		overflow: visible;
+		width: 495px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+	}
+	#Bibbis_Garden__21_Via_Alessand {
+		left: 98px;
+		top: 130px;
+		position: absolute;
+		overflow: visible;
+		width: 301px;
+		height: 69px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#Componente_18__1 {
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 620.5px;
+		top: 44.637px;
+		overflow: visible;
+	}
+	#Imagem_21 {
+		position: absolute;
+		width: 490px;
+		height: 327px;
+		left: 0px;
+		top: 1px;
+		overflow: visible;
+	}
+	f.container2 {
+		position: relative;
+		width: 50%;
+	}
+
+	.overlay2 {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: white;
+	}
+
+	.container2:hover .overlay2 {
+		opacity: 70%;
+	}
+
+	.text2 {
+		color: black;
+		font-size: 12px;
+		line-height: 1.5;
+		position: absolute;
+		top: 25%;
+		left: 23%;
+		padding: 5%;
+		text-align: center;
+		font-family: Gotham;
+		font-weight: normal;
+	}
+	
+	#Grupo_40 {
+		opacity: 0.003;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_27_br {
+		opacity: 0.72;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_27_br {
+		position: absolute;
+		overflow: visible;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+	}
+	#Color_House__7_Via_Giulio_Rocc {
+		left: 96px;
+		top: 128px;
+		position: absolute;
+		overflow: visible;
+		width: 301px;
+		height: 72px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#Componente_19__1 {
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 618.5px;
+		top: 406.637px;
+		overflow: visible;
+	}
+	#Imagem_23 {
+		position: absolute;
+		width: 490px;
+		height: 326px;
+		left: 2px;
+		top: 1px;
+		overflow: visible;
+	}
+	f.container4 {
+		position: relative;
+		width: 50%;
+	}
+
+	.overlay4 {
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		height: 100%;
+		width: 100%;
+		opacity: 0;
+		transition: .5s ease;
+		background-color: white;
+	}
+
+	.container4:hover .overlay4 {
+		opacity: 70%;
+	}
+
+	.text4 {
+		color: black;
+		font-size: 12px;
+		line-height: 1.5;
+		position: absolute;
+		top: 25%;
+		left: 13%;
+		padding: 5%;
+		text-align: center;
+		font-family: Gotham;
+		font-weight: normal;
+	}
+	#Grupo_40_bv {
+		opacity: 0;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_27_bw {
+		opacity: 0.9;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_27_bw {
+		position: absolute;
+		overflow: visible;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+	}
+	#Near_Metro_Flat_-_Best_BnB_Gar {
+		left: 96px;
+		top: 115px;
+		position: absolute;
+		overflow: visible;
+		width: 301px;
+		height: 98px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#Componente_20__1 {
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 620.5px;
+		top: 767.637px;
+		overflow: visible;
+	}
+	#Imagem_25 {
+		position: absolute;
+		width: 490px;
+		height: 327px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Caminho_24 {
+		opacity: 0.72;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Caminho_24 {
+		overflow: visible;
+		position: absolute;
+		width: 492px;
+		height: 1px;
+		left: 0px;
+		top: 326px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Grupo_40_b {
+		opacity: 0;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_27_b {
+		opacity: 0.72;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_27_b {
+		position: absolute;
+		overflow: visible;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+	}
+	#Le_Tre_Sorelle_Bb_Garbatella__ {
+		left: 81px;
+		top: 128px;
+		position: absolute;
+		overflow: visible;
+		width: 331px;
+		height: 72px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#Componente_21__1 {
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 73px;
+		top: 764.637px;
+		overflow: visible;
+	}
+	#Imagem_24 {
+		position: absolute;
+		width: 492px;
+		height: 327px;
+		left: 0px;
+		top: 1px;
+		overflow: visible;
+	}
+	#Grupo_40_ca {
+		opacity: 0;
+		position: absolute;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_27_ca {
+		opacity: 0.72;
+		fill: rgba(255,255,255,1);
+		stroke: rgba(255,255,255,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_27_ca {
+		position: absolute;
+		overflow: visible;
+		width: 492px;
+		height: 328px;
+		left: 0px;
+		top: 0px;
+	}
+	#Casa_Dolce_Casa__VIA_GIUSEPPE_ {
+		left: 81px;
+		top: 128px;
+		position: absolute;
+		overflow: visible;
+		width: 331px;
+		height: 72px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 22px;
+		color: rgba(112,112,112,1);
+		text-decoration: underline;
+	}
+	#n_0_Results {
+		left: 72px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 160px;
+		height: 27px;
+		text-align: left;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 25px;
+		color: rgba(98,98,98,1);
+		text-transform: uppercase;
+	}
+	#Linha_18 {
+		fill: transparent;
+		stroke: rgba(214,214,214,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_18 {
+		overflow: visible;
+		position: absolute;
+		width: 1179px;
+		height: 1px;
+		left: 741px;
+		top: 309.5px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_18_ {
+		fill: transparent;
+		stroke: rgba(214,214,214,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_18_ {
+		overflow: visible;
+		position: absolute;
+		width: 1179px;
+		height: 1px;
+		left: 741px;
+		top: 148.8px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Grupo_31 {
+		position: absolute;
+		width: 161px;
+		height: 57px;
+		left: 1677.5px;
+		top: 230px;
+		overflow: visible;
+	}
+	#Retngulo_23 {
+		fill: rgba(86,130,201,1);
+	}
+	.Retngulo_23 {
+		position: absolute;
+		overflow: visible;
+		width: 161px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#SEARCH {
+		left: 33px;
+		top: 18px;
+		position: absolute;
+		overflow: visible;
+		width: 96px;
+		height: 22px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 20px;
+		color: rgba(255,255,255,1);
+	}
+	#Grupo_34 {
+		position: absolute;
+		width: 90px;
+		height: 57px;
+		left: 1581.5px;
+		top: 230px;
+		overflow: visible;
+	}
+	#Grupo_33 {
+		position: absolute;
+		width: 90px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_23_cg {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(214,214,214,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_23_cg {
+		position: absolute;
+		overflow: visible;
+		width: 90px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Grupo_32 {
+		position: absolute;
+		width: 16px;
+		height: 18px;
+		left: 38px;
+		top: 20px;
+		overflow: visible;
+	}
+	#Linha_12 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_12 {
+		overflow: visible;
+		position: absolute;
+		width: 3px;
+		height: 18px;
+		left: 2.401px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_13 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_13 {
+		overflow: visible;
+		position: absolute;
+		width: 3px;
+		height: 18px;
+		left: 7.401px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_14 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_14 {
+		overflow: visible;
+		position: absolute;
+		width: 3px;
+		height: 18px;
+		left: 13.401px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_15 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_15 {
+		overflow: visible;
+		position: absolute;
+		width: 5px;
+		height: 3px;
+		left: 0px;
+		top: 4px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_16 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_16 {
+		overflow: visible;
+		position: absolute;
+		width: 5px;
+		height: 3px;
+		left: 5px;
+		top: 13px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Linha_17 {
+		fill: transparent;
+		stroke: rgba(112,112,112,1);
+		stroke-width: 3px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Linha_17 {
+		overflow: visible;
+		position: absolute;
+		width: 5px;
+		height: 3px;
+		left: 11px;
+		top: 9px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Grupo_35 {
+		position: absolute;
+		width: 763px;
+		height: 57px;
+		left: 812.5px;
+		top: 230px;
+		overflow: visible;
+	}
+	#Grupo_33_cp {
+		position: absolute;
+		width: 763px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Retngulo_23_cq {
+		fill: rgba(255,255,255,1);
+		stroke: rgba(214,214,214,1);
+		stroke-width: 1px;
+		stroke-linejoin: miter;
+		stroke-linecap: butt;
+		stroke-miterlimit: 4;
+		shape-rendering: auto;
+	}
+	.Retngulo_23_cq {
+		position: absolute;
+		overflow: visible;
+		width: 763px;
+		height: 57px;
+		left: 0px;
+		top: 0px;
+	}
+	#Captura_de_ecra_2022-11-13_as_ {
+		position: absolute;
+		width: 1033px;
+		height: 1478px;
+		left: -291.5px;
+		top: 147.5px;
+		overflow: visible;
+	}
+	#Componente_22__1 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 199.5px;
+		top: 682.5px;
+		overflow: visible;
+	}
+	#Imagem_20 {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_cu {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Imagem_26 {
+		position: absolute;
+		width: 47px;
+		height: 47px;
+		left: 136.5px;
+		top: 761.5px;
+		overflow: visible;
+	}
+	#Universit_degli__Studi_Roma_Tr {
+		left: 108.5px;
+		top: 818.5px;
+		position: absolute;
+		overflow: visible;
+		width: 103px;
+		height: 39px;
+		text-align: center;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: normal;
+		font-size: 12px;
+		color: rgba(34,34,34,1);
+	}
+	#Componente_22__2 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 170.5px;
+		top: 653.5px;
+		overflow: visible;
+	}
+	#Imagem_20_cy {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_cz {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Componente_22__3 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 133.5px;
+		top: 661.5px;
+		overflow: visible;
+	}
+	#Imagem_20_c {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_da {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Componente_22__4 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 248.5px;
+		top: 636.5px;
+		overflow: visible;
+	}
+	#Imagem_20_db {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_dc {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Componente_22__5 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 285.5px;
+		top: 597.5px;
+		overflow: visible;
+	}
+	#Imagem_20_dd {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_de {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Componente_22__6 {
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 405.5px;
+		top: 565.5px;
+		overflow: visible;
+	}
+	#Imagem_20_df {
+		opacity: 0;
+		position: absolute;
+		width: 37px;
+		height: 64px;
+		left: 0px;
+		top: 0px;
+		overflow: visible;
+	}
+	#Imagem_20_dg {
+		position: absolute;
+		width: 23px;
+		height: 41px;
+		left: 7px;
+		top: 23px;
+		overflow: visible;
+	}
+	#Search_for_available_rooms {
+		left: 812.5px;
+		top: 181px;
+		position: absolute;
+		overflow: visible;
+		width: 519px;
+		height: 35px;
+		text-align: left;
+		font-family: Gotham;
+		font-style: normal;
+		font-weight: bold;
+		font-size: 28px;
+		color: rgba(112,112,112,1);
+		text-transform: uppercase;
+	}
+	#Caminho_19 {
+		fill: rgba(103,103,103,1);
+	}
+	.Caminho_19 {
+		overflow: visible;
+		position: absolute;
+		width: 23.922px;
+		height: 23.921px;
+		left: 1552.539px;
+		top: 135.54px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Grupo_23 {
+		position: absolute;
+		width: 114.955px;
+		height: 89.75px;
+		left: 122.54px;
+		top: 34.254px;
+		overflow: visible;
+		cursor: pointer;
+	}
+	#Caminho_14 {
+		fill: rgba(103,103,103,1);
+	}
+	.Caminho_14 {
+		overflow: visible;
+		position: absolute;
+		width: 114.197px;
+		height: 26.052px;
+		left: 0.102px;
+		top: 49.561px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Caminho_15 {
+		fill: rgba(103,103,103,1);
+	}
+	.Caminho_15 {
+		overflow: visible;
+		position: absolute;
+		width: 114.194px;
+		height: 29.703px;
+		left: 0.094px;
+		top: 23.955px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Caminho_16 {
+		fill: rgba(103,103,103,1);
+	}
+	.Caminho_16 {
+		overflow: visible;
+		position: absolute;
+		width: 114.184px;
+		height: 14.329px;
+		left: 0.077px;
+		top: 75.421px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Caminho_17 {
+		fill: rgba(103,103,103,1);
+	}
+	.Caminho_17 {
+		overflow: visible;
+		position: absolute;
+		width: 39.302px;
+		height: 22.729px;
+		left: 0px;
+		top: 1.143px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Caminho_18 {
+		fill: rgba(172,23,36,1);
+	}
+	.Caminho_18 {
+		overflow: visible;
+		position: absolute;
+		width: 57.098px;
+		height: 28.595px;
+		left: 57.856px;
+		top: 0px;
+		transform: matrix(1,0,0,1,0,0);
+	}
+	#Grupo_56 {
+		position: absolute;
+		width: 40px;
+		height: 40px;
+		left: 1607px;
+		top: 70px;
+		overflow: visible;
+	}
+	a:link {
+	  color: #707070;
+	  background-color: transparent;
+	  text-decoration: none;
+	}
+
+	a:visited {
+	  color: #707070;
+	  background-color: transparent;
+	  text-decoration: none;
+	}
+
+	a:hover {
+	  color: #707070;
+	  background-color: transparent;
+	  text-decoration: underline;
+	}
+</style>
+</head>
+<body>
+	
+<div id="MAPA">
+	<div onclick="application.goToTargetView(event)" id="Back___">
+		<a href="index_Ingles.html"><span>Back   </span></a>
+	</div>
+	<div id="n___Rooms">
+		<span>/   </span><span style="color:rgba(158,41,43,1);">Rooms</span>
+	</div>
+	<div id="Grupo_de_rolagem_2">
+		<div id="Grupo_45">
+			<svg class="Retngulo_26">
+				<rect id="Retngulo_26" rx="0" ry="0" x="0" y="0" width="1178.5" height="1144.637">
+				</rect>
+			</svg>
+			<div onclick="application.showOverlay(event,'Loading__3',9,-1)" id="Grupo_60">
+		
+			<div class="container1">
+				<img id="Imagem_19" src="Imagem_19.png" alt="Quarto 1">
+				<div class="overlay1">
+					
+					<div class="text1">
+					<a href="https://www.booking.com/hotel/it/near-metro-flat-best-bnb-garbatella.pt-pt.html?aid=318615&label=New_Portuguese_PT_PT_21463003945-pivUlUiXW_wsN5PR7Ik1cgS84783490345%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&sid=10cf5b599939db817c2845b5a20001d3&dest_id=-126693;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1668794561;srpvid=44a07ee0750f038e;type=total;ucfs=1&#hotelTmpl"><h2>Loftlibetta1</h2></a>
+						<br>
+					<h3>71 Via Giulio Rocco,</h3>
+					<h3>Ostiense, 00154 Roma, Itália</h3>	
+				</div>
+				</div>
+			</div>
+			</div>
+			<div id="Componente_17__1" class="Componente_17___1">
+				<div class="container3">
+				<img id="Imagem_27" src="Imagem_27.png" alt="Quarto 3">
+				<div class="overlay3">
+					
+					<div class="text3">
+					<a href="https://www.booking.com/hotel/it/bibbi-39-s-garden.pt-pt.html?dest_type=city&room1=A%2CA&sid=58a328eee60bc211dd2960d3e2ceebc3&req_adults=2&dest_id=-126693&srpvid=9b946d1bc7400043&ucfs=1&group_adults=2&aid=318615&hapos=1&group_children=0&type=total&dist=0&hpos=1&sb_price_type=total&req_children=0&sr_order=popularity&srepoch=1668353465&label=New_Portuguese_PT_PT_21463003945-pivUlUiXW_wsN5PR7Ik1cgS84783490345%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&no_rooms=1&activeTab=main#map_closed"><h2>Bibbi's Garden</h2></a>
+						<br>
+					<h3>21 Via Alessandro Cialdi,</h3>
+					<h3>Ostiense, 00154 Roma, Itália</h3>	
+				</div>
+				</div>
+			</div>
+			</div>
+			<div id="Componente_18__1" class="Componente_18___1">
+				<div class="container2">
+				<img id="Imagem_21" src="Imagem_21.png" alt="Quarto 2">
+				<div class="overlay2">
+					
+					<div class="text2">
+					<a href="https://www.booking.com/hotel/it/color-house-roma.pt-pt.html?aid=318615&label=New_Portuguese_PT_PT_21463003945-pivUlUiXW_wsN5PR7Ik1cgS84783490345%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&sid=10cf5b599939db817c2845b5a20001d3&dest_id=-126693;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1668794732;srpvid=4ad47f350db10269;type=total;ucfs=1&#hotelTmpl"><h2>Color House</h2></a>
+						<br>
+					<h3>7 Via Giulio Rocco,</h3>
+					<h3>Ostiense, 00154 Roma, Itália</h3>	
+				</div>
+				</div>
+			</div>
+			</div>
+			<div id="Componente_19__1" class="Componente_19___1">
+				<div class="container4">
+				<img id="Imagem_23" src="Imagem_23.png" alt="Quarto 4">
+				<div class="overlay4">
+					
+					<div class="text4">
+					<a href="https://www.booking.com/hotel/it/near-metro-flat-best-bnb-garbatella.pt-pt.html?aid=318615&label=New_Portuguese_PT_PT_21463003945-pivUlUiXW_wsN5PR7Ik1cgS84783490345%3Apl%3Ata%3Ap1%3Ap2%3Aac%3Aap%3Aneg&sid=10cf5b599939db817c2845b5a20001d3&dest_id=-126693;dest_type=city;dist=0;group_adults=2;group_children=0;hapos=1;hpos=1;no_rooms=1;req_adults=2;req_children=0;room1=A%2CA;sb_price_type=total;sr_order=popularity;srepoch=1668794561;srpvid=44a07ee0750f038e;type=total;ucfs=1&#hotelTmpl"><h2>Near Metro Flat - Best BnB Garbatella</h2></a>
+						<br>
+					<h3>34 Via Alessandro Cialdi,</h3>
+					<h3>Ostiense, 00154 Roma, Itália</h3>	
+				</div>
+				</div>
+			</div>
+			</div>
+			<div id="Componente_20__1" class="Componente_20___1">
+				<img id="Imagem_25" src="Imagem_25.png" alt="Quarto">
+					
+				<svg class="Caminho_24" viewBox="0 328 492 1">
+					<path id="Caminho_24" d="M 492 328 L 0 328 L 492 328 Z">
+					</path>
+				</svg>
+				<div id="Grupo_40_b">
+					<svg class="Retngulo_27_b">
+						<rect id="Retngulo_27_b" rx="0" ry="0" x="0" y="0" width="492" height="328">
+						</rect>
+					</svg>
+					<div id="Le_Tre_Sorelle_Bb_Garbatella__">
+						<span>Le Tre Sorelle B&b Garbatella</span><br/><span style="font-size:20px;"> Via Giovanni Battista Licata, 12, Ostiense, 00154 Roma, Itália</span>
+					</div>
+				</div>
+			</div>
+			<div id="Componente_21__1" class="Componente_21___1">
+				<img id="Imagem_24" src="Imagem_24.png" alt="Quarto">
+					
+				<div id="Grupo_40_ca">
+					<svg class="Retngulo_27_ca">
+						<rect id="Retngulo_27_ca" rx="0" ry="0" x="0" y="0" width="492" height="328">
+						</rect>
+					</svg>
+					<div id="Casa_Dolce_Casa__VIA_GIUSEPPE_">
+						<span>Casa Dolce Casa<br/> </span><span style="font-size:20px;">VIA GIUSEPPE LIBETTA 19, Ostiense, 00154 Roma, Itália</span>
+					</div>
+				</div>
+			</div>
+			<div id="n_0_Results">
+				<span>30 Results</span>
+			</div>
+		</div>
+	</div>
+	<svg class="Linha_18" viewBox="0 0 1179 1">
+		<path id="Linha_18" d="M 0 0 L 1179 0">
+		</path>
+	</svg>
+	<svg class="Linha_18_" viewBox="0 0 1179 1">
+		<path id="Linha_18_" d="M 0 0 L 1179 0">
+		</path>
+	</svg>
+  <div id="Grupo_31">
+		<svg class="Retngulo_23">
+			<rect id="Retngulo_23" rx="6" ry="6" x="0" y="0" width="161" height="57">
+			</rect>
+		</svg>
+		<div id="SEARCH">
+			<span>SEARCH</span>
+		</div>
+	</div>
+	<div id="Grupo_34">
+		<div id="Grupo_33">
+			<svg class="Retngulo_23_cg">
+				<rect id="Retngulo_23_cg" rx="6" ry="6" x="0" y="0" width="90" height="57">
+				</rect>
+			</svg>
+		</div>
+		<div id="Grupo_32">
+			<svg class="Linha_12" viewBox="0 0 3 18">
+				<path id="Linha_12" d="M 0 0 L 0 18">
+				</path>
+			</svg>
+			<svg class="Linha_13" viewBox="0 0 3 18">
+				<path id="Linha_13" d="M 0 0 L 0 18">
+				</path>
+			</svg>
+			<svg class="Linha_14" viewBox="0 0 3 18">
+				<path id="Linha_14" d="M 0 0 L 0 18">
+				</path>
+			</svg>
+			<svg class="Linha_15" viewBox="0 0 5 3">
+				<path id="Linha_15" d="M 0 0 L 5 0">
+				</path>
+			</svg>
+			<svg class="Linha_16" viewBox="0 0 5 3">
+				<path id="Linha_16" d="M 0 0 L 5 0">
+				</path>
+			</svg>
+			<svg class="Linha_17" viewBox="0 0 5 3">
+				<path id="Linha_17" d="M 0 0 L 5 0">
+				</path>
+			</svg>
+		</div>
+	</div>
+	<div id="Grupo_35">
+		<div id="Grupo_33_cp">
+			<svg class="Retngulo_23_cq">
+				<rect id="Retngulo_23_cq" rx="6" ry="6" x="0" y="0" width="763" height="57">
+				</rect>
+			</svg>
+		</div>
+	</div>
+	<img id="Captura_de_ecra_2022-11-13_as_" src="Captura_de_ecra_2022-11-13_as_.png" alt="Localização">
+		
+	<div id="Componente_22__1" class="Componente_22___1">
+		<img id="Imagem_20" src="Imagem_20.png" alt="Localização">
+			
+		<img id="Imagem_20_cu" src="Imagem_20_cu.png" alt="Localização">
+			
+	</div>
+	<img id="Imagem_26" src="Imagem_26.png" alt="Localização">
+		
+	<div id="Universit_degli__Studi_Roma_Tr">
+		<span>Università degli <br/>Studi Roma Tre<br/> - Rettorato</span>
+	</div>
+	<div id="Componente_22__2" class="Componente_22___2">
+		<img id="Imagem_20_cy" src="Imagem_20_cy.png" alt="Localização">
+			
+		<img id="Imagem_20_cz" src="Imagem_20_cz.png" alt="Localização">
+			
+	</div>
+	<div id="Componente_22__3" class="Componente_22___3">
+		<img id="Imagem_20_c" src="Imagem_20_c.png" alt="Localização">
+			
+		<img id="Imagem_20_da" src="Imagem_20_da.png" alt="Localização">
+			
+	</div>
+	<div id="Componente_22__4" class="Componente_22___4">
+		<img id="Imagem_20_db" src="Imagem_20_db.png" alt="Localização">
+			
+		<img id="Imagem_20_dc" src="Imagem_20_dc.png" alt="Localização">
+			
+	</div>
+	<div id="Componente_22__5" class="Componente_22___5">
+		<img id="Imagem_20_dd" src="Imagem_20_dd.png" alt="Localização">
+			
+		<img id="Imagem_20_de" src="Imagem_20_de.png" alt="Localização">
+			
+	</div>
+	<div id="Componente_22__6" class="Componente_22___6">
+		<img id="Imagem_20_df" src="Imagem_20_df.png" alt="Localização">
+			
+		<img id="Imagem_20_dg" src="Imagem_20_dg.png" alt="Localização">
+			
+	</div>
+	<div id="Search_for_available_rooms">
+		<span>Search for available rooms</span>
+	</div>
+</div>
+</body>
+</html>
